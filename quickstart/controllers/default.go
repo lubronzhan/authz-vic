@@ -19,8 +19,9 @@ const baseUrl = "https://%s/openidconnect/token/%s"
 const certUrl = "https://%s/idm/tenant/%s/certificates/?scope=TENANT"
 
 var (
-	tenant = "vsphere.local"
-	tr     = &http.Transport{
+	hostname string
+	tenant   = "vsphere.local"
+	tr       = &http.Transport{
 		TLSClientConfig: &tls.Config{
 			InsecureSkipVerify: true,
 		},
@@ -52,7 +53,7 @@ func (c *MainController) Post() {
 	c.TplName = "index.tpl"
 	username := c.GetString("username")
 	password := c.GetString("password")
-	hostname := c.GetString("hostname")
+	hostname = c.GetString("hostname")
 
 	accessToken, err := requestToken(username, password)
 	if err != nil {
