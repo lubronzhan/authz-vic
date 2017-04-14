@@ -1,0 +1,21 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/dgrijalva/jwt-go",
+			"repository": "https://github.com/dgrijalva/jwt-go",
+			"vcs": "git",
+			"revision": "2268707a8f0843315e2004ee4f1d021dc08baedf",
+			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/supervised-io/tokenverifier",
+			"repository": "https://github.com/supervised-io/tokenverifier",
+			"vcs": "git",
+			"revision": "ce646aa7dc54829f206489117125aca7daa546f8",
+			"branch": "master",
+			"notests": true
+		}
+	]
+}
